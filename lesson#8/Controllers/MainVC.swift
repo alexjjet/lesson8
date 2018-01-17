@@ -32,9 +32,11 @@ class MainVC: UIViewController {
         if let detailsVC = segue.destination as? ShowPostVC {
             print(sender as? NSObject)
             
-            //            detailsVC
-            detailsVC.image = sender as? UIImage
-            detailsVC.label = sender as? UILabel
+            if let tuple = sender as? (UIImage?, String?) {
+                detailsVC.image = tuple.0
+                detailsVC.label = tuple.1
+            }
         }
     }
 }
+

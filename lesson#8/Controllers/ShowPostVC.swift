@@ -11,7 +11,7 @@ import UIKit
 class ShowPostVC: UIViewController {
     
     var image: UIImage?
-    var label: UILabel?
+    var label: String?
     @IBOutlet weak var imageBox: UIImageView!
     @IBOutlet weak var labelPost: UILabel!
     
@@ -21,6 +21,6 @@ class ShowPostVC: UIViewController {
         view.backgroundColor = .darkGray
         
         imageBox.image = image
-        labelPost.text = label?.description ?? "nfrjt"
+        labelPost.text = label ?? "nfrjt"
     }
 }
